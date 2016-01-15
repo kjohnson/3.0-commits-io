@@ -1,0 +1,29 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit;
+
+/**
+ * Class NF_Fields_Hr
+ */
+class NF_Fields_Hr extends NF_Abstracts_Input
+{
+    protected $_name = 'hr';
+
+    protected $_section = 'misc';
+
+    protected $_aliases = array( 'html' );
+
+    protected $_type = 'hr';
+
+    protected $_templates = 'hr';
+
+    protected $_settings_only = array( 'classes' );
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->_settings[ 'classes' ][ 'group' ] = 'primary';
+
+        $this->_nicename = __( 'hr', 'ninja-forms' );
+    }
+
+}
